@@ -1,0 +1,30 @@
+r1 = add (1,2) (add (2,3) (add (3,4) emptyBinaryRelation)) 
+r2 = add (1,2) (add (3, 4) (add (2,3) emptyBinaryRelation))
+
+- reflexive: 
+r = add (1,1) (add (2,2) (add (3,3) emptyBinaryRelation)
+
+- union: 
+r1 = add (1,1) (add (1,2) (add (1,3) emptyBinaryRelation))
+r2 = add (2,1) (add (2,2) (add (2,3) emptyBinaryRelation))
+
+- inverse:
+r = add (1,2) (add (1, 1) (add (2,3) (add (2, 2) (add (3,3) emptyBinaryRelation))))
+
+- symmetric:
+r = add (1,2) (add (2,1) (add (2, 3) (add (3,2) emptyBinaryRelation)))
+
+- transitive:
+r = add (1,1) (add (1,2) emptyBinaryRelation )
+
+- reflexive Closure:
+r = addMultiple [(1, 2), (2, 2), (1, 4)] emptyBinaryRelation 
+r' = reflexiveClosure r
+
+- symmetric Closure:
+r = addMultiple [(1, 2), (1, 3), (1, 5), (1, 1)] emptyBinaryRelation
+r' = symmetricClosure r
+
+- selfJoin: 
+r = addMultiple [(1, 3), (3, 1), (2,3)] emptyBinaryRelation  
+k = selfJoin r
